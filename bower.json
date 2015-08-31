@@ -1,0 +1,21 @@
+{
+  "name": "decyber",
+  "version": "1.0.0",
+  "authors": [
+    "mayth <chimeaquas@hotmail.com>"
+  ],
+  "description": "why CTF teams/organizers need a cyber-theme?",
+  "license": "MIT",
+  "homepage": "https://github.com/mayth/decyber",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "pure": "~0.6.0"
+  }
+}

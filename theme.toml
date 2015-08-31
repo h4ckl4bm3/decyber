@@ -1,0 +1,12 @@
+name = "Decyber"
+license = "MIT"
+licenselink = "https://github.com/mayth/decyber/blob/master/LICENSE.md"
+description = "why CTF teams/organizers need a cyber-theme?"
+homepage = "https://github.com/mayth/decyber"
+tags = [""]
+features = [""]
+min_version = 0.13
+
+[author]
+  name = "mayth"
+  homepage = "http://aquarite.info"
