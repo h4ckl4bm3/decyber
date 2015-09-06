@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+
+    <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    {{.Hugo.Generator}}
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
+    <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme.css">
+    <script src="{{ .Site.BaseURL }}/js/theme.js"></script>
+
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
+</head>
+<body>
+
+<div class="pure-g">
+  <div class="pure-u-1">
+    <div id="site-header">
+      <h1>
+        {{ if isset .Site.Params "TitleImage" }}
+          <img src="{{ .Site.Params.TitleImage }}" alt="{{ .Site.Title }}">
+        {{ else }}
+          {{ .Site.Title }}
+        {{ end }}
+      </h1>
+      {{ if isset .Site.Params "ShortDescription" }}
+        <span class="site-shortdesc">{{ .Site.Params.ShortDescription }}</span>
+      {{ end }}
+    </div>
+  </div>
+</div>

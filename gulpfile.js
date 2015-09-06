@@ -20,9 +20,9 @@ gulp.task('uglify', function () {
 
 gulp.task('minify-css', function () {
   gulp.src('./assets/css/**/*.css')
-    .pipe(concat('app.css'))
+    .pipe(concat('theme.css'))
     .pipe(minifyCss())
     .pipe(gulp.dest('./static/css'));
 });
 
-gulp.task('dist', ['uglify', 'minify-css']);
+gulp.task('dist', ['bower', 'uglify', 'minify-css']);
